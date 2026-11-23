@@ -50,6 +50,16 @@ excluded.json     # 被排除项
 
 安装后到「设置 → 配置同步」填写 Git（SSH）仓库地址即可。
 
+### 通过自定义插件市场索引安装
+
+本仓库根目录提供 `market-index.json`。在 DSH「插件市场 / Discover」里添加索引地址：
+
+```
+https://raw.githubusercontent.com/SupremeIdol/dsh-config-sync/main/market-index.json
+```
+
+即可在市场里直接看到并安装 `@worktool/dsh-config-sync`（索引同时收录了 `@worktool/dsh-diagram`）。
+
 ## English
 
 Export/import DSH global config, skills, and installed plugins (name@version); Git(SSH) cloud sync to your own repo. Secrets are never exported; settings containing secret keys are redacted. Configure the repo under Settings → Config Sync.
