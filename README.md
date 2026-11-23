@@ -1,5 +1,10 @@
 # @worktool/dsh-config-sync
 
+[![npm version](https://img.shields.io/npm/v/@worktool/dsh-config-sync?color=blue)](https://www.npmjs.com/package/@worktool/dsh-config-sync)
+[![npm downloads](https://img.shields.io/npm/dm/@worktool/dsh-config-sync)](https://www.npmjs.com/package/@worktool/dsh-config-sync)
+[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![DSH bundle](https://img.shields.io/badge/DSH-bundle-6f42c1.svg)](https://github.com/SupremeIdol/dsh-config-sync)
+
 DeepSeek Harness（DSH）配置同步插件：把你的 **全局配置、全局 Skills、已安装插件清单** 导出为一个可版本化的同步包，并支持通过 **Git（SSH）** 同步到自建仓库（如 Gitee），换机或重装后一键还原。
 
 ## 功能
