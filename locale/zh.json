@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "配置同步",
+    "description": "导出/导入 DSH 全局配置、Skills 与已安装插件，并支持 Git 云同步。"
+  }
+}

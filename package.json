@@ -1,0 +1,56 @@
+{
+  "name": "@worktool/dsh-config-sync",
+  "version": "0.1.0",
+  "description": "DSH 配置同步 — 导出/导入 DSH 全局配置、全局 Skills 与已安装插件（按 name@version），并支持通过 Git(SSH) 同步到自建仓库（如 Gitee）。",
+  "license": "MIT",
+  "author": "SupremeIdol",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SupremeIdol/dsh-config-sync.git"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./icon": "./assets/icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "assets",
+    "docs",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "config",
+    "sync",
+    "backup",
+    "git"
+  ],
+  "icon": "./assets/icon.svg"
+}

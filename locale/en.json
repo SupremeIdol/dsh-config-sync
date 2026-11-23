@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Config Sync",
+    "description": "Export and import DSH global config, skills, and installed plugins, with Git-based cloud sync."
+  }
+}

@@ -1,0 +1,4 @@
+# dsh-config-sync bundle patch
+- insert:
+    - id: config-sync
+      name: '@worktool/dsh-config-sync'
