@@ -60,6 +60,27 @@ https://raw.githubusercontent.com/SupremeIdol/dsh-config-sync/main/market-index.
 
 即可在市场里直接看到并安装 `@worktool/dsh-config-sync`（索引同时收录了 `@worktool/dsh-diagram`）。
 
+## 常见问题
+
+### 安装时报 `ERR_PNPM_NO_MATCHING_VERSION ... npmmirror.com`
+
+原因：国内环境默认使用 `registry.npmmirror.com` 镜像，新发布的版本通常要过几分钟到几小时才同步，这段时间 pnpm 会找不到对应版本。
+
+解决（任选其一）：
+
+- 等镜像同步后重试；
+- 安装时显式指定官方源（插件管理器里把 registry 设为 `https://registry.npmjs.org/`）：
+  ```
+  plugin_manager install_bundle
+    target   = @worktool/dsh-config-sync@1.0.0
+    registry = https://registry.npmjs.org/
+  ```
+- 一次性配置（推荐）：在 DSH profile 目录的 `.npmrc` 里加一行
+  ```
+  @worktool:registry=https://registry.npmjs.org/
+  ```
+  之后 `@worktool/*` 都走官方源，其它包仍走镜像，不影响速度。
+
 ## English
 
 Export/import DSH global config, skills, and installed plugins (name@version); Git(SSH) cloud sync to your own repo. Secrets are never exported; settings containing secret keys are redacted. Configure the repo under Settings → Config Sync.
