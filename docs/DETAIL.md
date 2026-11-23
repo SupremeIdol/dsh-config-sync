@@ -16,7 +16,7 @@
 ## 安全
 
 - 只读/白名单扫描，`.credentials.yaml`、`.env` 等永不读取。
-- `settings.yaml` 逐行键名匹配 `apikey|secret|token|password|bearer|private_key` 的值清空（`apiKeyEnv` 等环境变量名保留）。
+- `settings.yaml` 只对**密钥类键名**（apikey/secret/token/password/bearer/privateKey/accessKey 等）的值清空（`apiKeyEnv` 等环境变量名保留，`maxTokens`/`contextWindow` 等普通参数保留）；导入时若本机已有该密钥则保留本机值，避免被脱敏空值覆盖。
 - Git 凭据走系统 SSH/凭据助手，不写入同步包。
 
 ## 注意
